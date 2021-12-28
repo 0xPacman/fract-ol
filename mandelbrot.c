@@ -14,6 +14,27 @@
 
 int mandelbrot_set(float x, float y, t_data *mlx)
 {
+    int i;
+    float zx;
+    float zy;
+    float temp;
+
+    zx = 0;
+    zy = 0;
+    i = 1;
+    while (i < ITERATION)
+        {
+            temp = zx;
+            zx = ((zx * zx) - (zy * zy)) + x;
+            zy = (2 * temp * zy) + y;
+            if ((zx * zx) + (zy * zy) > 4)
+                {
+                    ft_draw(mlx, mlx->loopx, mlx->loopy, 0x00FEECBA);
+                    return (0);
+                }
+            //            printf("%f %f\n%d iter\n", x,y,i);
+            i++;
+        }
 	ft_draw(mlx, mlx->loopx, mlx->loopy, 0);
 	return (0);
 }
@@ -30,8 +51,8 @@ void mandelbrot(t_data *mlx)
 	{
 		while (mlx->loopx <= SIZEX)
 		{
-			x = mlx->xmin + (mlx->loopx * (mlx->xmax - mlx->xmin) / SIZEX);
-			y = mlx->ymax - (mlx->loopy * (mlx->ymax - mlx->ymin) / SIZEY);
+			x = mlx->xmin + (mlx->loopx * ((mlx->xmax - mlx->xmin) / SIZEX));
+			y = mlx->ymax - (mlx->loopy * ((mlx->ymax - mlx->ymin) / SIZEY));
 			mandelbrot_set(x, y, mlx);
 			mlx->loopx++;
 		}
@@ -53,8 +74,8 @@ void start_mandelbrot(void)
 	mlx->mlx = mlx_init();
 	mlx->win = mlx_new_window(mlx->mlx, SIZEX, SIZEY, "Fract'ol - Mandelbrot");
 	mlx->xmin = MINX;
+    mlx->xmax = MAXX;
 	mlx->ymin = MINY;
-	mlx->xmax = MAXX;
 	mlx->ymax = MAXY;
 	//mlx_key_hook(mlx->win, key, &mlx);
 	mandelbrot(mlx);

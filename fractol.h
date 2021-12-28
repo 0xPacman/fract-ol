@@ -12,13 +12,13 @@
 
 #ifndef		FRACTOL_H
 # define	FRACTOL_H
-#define ITERATIION 500
+#define ITERATION 200
 #define MINX -2
 #define MINY -2
 #define MAXX 2
 #define MAXY 2
-#define SIZEX 800
-#define SIZEY 800
+#define SIZEX 700
+#define SIZEY 700
 #include "mlx.h"
 #include <stdlib.h>
 #include <stdio.h>
