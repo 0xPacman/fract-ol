@@ -39,12 +39,10 @@ typedef struct s_data
 } t_data;
 
 void	start_mandelbrot(void);
-int	mandelbrot(t_data *mlx);
+int		mandelbrot(t_data *mlx);
 int		mandelbrot_set(float x, float y, t_data *mlx);
-void	ft_draw(t_data *mlx, int x, int y, int color);
 int		keys(int keycode, t_data *vars);
 int		endian_detect(void);
 int		zoom(int keycode, int x, int y, t_data *mlx);
-void	*ft_memset(void *s, int c, size_t n);
 void 	set2zero(t_data *mlx);
 #endif

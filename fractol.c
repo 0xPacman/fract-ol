@@ -21,31 +21,7 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-/*
-int	func(int keycode, t_data *obj)
-{
 
-	static int x, y;
-	printf("%d - %d\n",x,y);
-	if (keycode == 53)
-		exit(0);
-	if (keycode >= 123 && keycode <= 126)
-	{
-		keycode -= 123;
-		if (keycode == 0)
-			x--;
-		else if (keycode == 1)
-			x++;
-		else if (keycode == 2)
-			y++;
-		else
-			y--;
-	}
-	mlx_clear_window(obj->mlx, obj->win);
-	mlx_put_image_to_window(obj->mlx, obj->win, obj->img.data, x * obj->img.width, y * obj->img.height);
-	return (0);
-}
-*/
 void ft_header()
 {
 	printf(".::::::::                          .::  .::           .::\n");
@@ -101,13 +77,12 @@ int main(int argc, char *argv[])
 			if(!ft_strcmp(argv[1], "Burning ship"))
 				return (0);
 
-			//	ft_memset(mlx, 0, sizeof(t_data));
 			//	ft_detect(argv[1], mlx);
 			//	start_mandelbrot();
 	}
 	else
 	{
+		printf("Invalid Argument\n");
 		ft_usage();
-		start_mandelbrot();
 	}
 }

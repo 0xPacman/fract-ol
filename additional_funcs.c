@@ -32,11 +32,6 @@ void set2zero(t_data *mlx)
 	mlx->fractol = 0;
 }
 
-void	ft_draw(t_data *mlx, int x, int y, int color)
-{
-	mlx_pixel_put(mlx -> mlx, mlx -> win, x, y, color);
-}
-
 int	keys(int keycode, t_data *mlx)
 {
 	float dx;
