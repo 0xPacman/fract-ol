@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 13:34:10 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/12/27 16:07:40 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/12/29 22:54:07 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,23 @@ typedef struct s_data
 {
 	void *mlx;
 	void *win;
-	void *img;
-	void *img_addr;
-	int bits_per_pixel;
-	int size_line;
-	int endian;
 	int loopx;
 	int loopy;
 	float xmin;
 	float ymin;
 	float xmax;
 	float ymax;
+	int color;
+	int fractol;
 } t_data;
 
 void	start_mandelbrot(void);
-void	mandelbrot(t_data *mlx);
+int	mandelbrot(t_data *mlx);
 int		mandelbrot_set(float x, float y, t_data *mlx);
 void	ft_draw(t_data *mlx, int x, int y, int color);
-
+int		keys(int keycode, t_data *vars);
+int		endian_detect(void);
+int		zoom(int keycode, int x, int y, t_data *mlx);
+void	*ft_memset(void *s, int c, size_t n);
+void 	set2zero(t_data *mlx);
 #endif
