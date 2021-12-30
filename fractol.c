@@ -22,12 +22,11 @@ void ft_header()
 	printf(".::::::   .::    .::  .::  .::     .::      .::  .::  .::\n");
 	printf(".::       .::   .::   .:: .::      .::     .::    .:: .::\n");
 	printf(".::       .::   .::   .::  .::     .::      .::  .::  .::\n");
-	printf(".::      .:::     .:: .:::   .:::   .::       .::    .:::\n");
+	printf(".::      .:::     .:: .:::   .:::   .::       .::    .:::\n\n");
 }
 
 void ft_run(t_data *mlx, int flag)
 {
-    printf("%d\n", mlx->fractol);
 	if(mlx->fractol == 1 || i == 1)
         {
             i = 1;
@@ -54,13 +53,23 @@ void ft_run(t_data *mlx, int flag)
         }
 }
 
-void ft_usage(void)
+void ft_usage(int flag)
 {
-	printf("Usage: ./fractol <name>\n");
-	printf("List of available fractals:\n");
-	printf("- Mandelbrot\n");
-	printf("- Julia\n");
-	printf("- Burning ship\n");
+    if (flag)
+        printf(".:: Usage: ./fractol <name> ::.\n");
+	printf(".:: List of available fractals ::.\n");
+	printf("::: - Mandelbrot               :::\n");
+	printf("::: - Julia                    :::\n");
+	printf("::: - Burning ship             :::\n\n");
+}
+
+void	ft_how_to_use(void)
+{
+    printf(".::        Keys to use       ::.\n");
+    printf(":::  Left Click: to zoom in  :::\n");
+    printf("::: Right Click: to zoom out :::\n");
+    printf(":::    C: to change colors   :::\n");
+    printf(":::W,A,S,D: for Julia to move:::\n\n");
 }
 
 int ft_close(int keycode, t_data *x)
@@ -75,7 +84,8 @@ int main(int argc, char *argv[])
 	if (argc == 2)
 	{
 			ft_header();
-			ft_usage();            
+			ft_usage(0);
+            ft_how_to_use();
 			if(!ft_strcmp(argv[1], "Mandelbrot"))
                 mlx.fractol = 1;
 			if(!ft_strcmp(argv[1], "Julia"))
@@ -86,7 +96,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("Invalid Argument\n");
-		ft_usage();
+		printf(".::: Invalid Argument! :::.\n");
+		ft_usage(1);
 	}
 }

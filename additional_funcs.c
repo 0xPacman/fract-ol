@@ -61,7 +61,7 @@ int	keys(int keycode, t_data *mlx)
     if (keycode == 100)
         mlx->juliax += 0.2;
     ft_run(mlx,1);
-	printf("you clicked %d!\n", keycode);
+    //	printf("you clicked %d!\n", keycode);
 	return 0;
 }
 int	zoom(int keycode, int x, int y, t_data *mlx)
