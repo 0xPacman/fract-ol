@@ -12,24 +12,14 @@
 
 #include "fractol.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int     ft_strcmp(char *s1, char *s2)
 {
-	while (n--)
-		((char *)s)[n] = c;
-	return (s);
-}
+        unsigned int    i;
 
-void set2zero(t_data *mlx)
-{
-
-	mlx->loopx = 0;
-	mlx->loopy = 0;
-	mlx->xmin = 0;
-	mlx->ymin = 0;
-	mlx->xmax = 0;
-	mlx->ymax = 0;
-	mlx->color = 0;
-	mlx->fractol = 0;
+        i = 0;
+        while (s2[i] && s1[i] && s1[i] == s2[i])
+                i++;
+        return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 int	keys(int keycode, t_data *mlx)
@@ -41,28 +31,36 @@ int	keys(int keycode, t_data *mlx)
 	dy = (mlx->ymax - mlx->ymin);
 	if (keycode == 53)
 		exit(0);
-	if(keycode == 123 || keycode == 124)
-	{
-		if(keycode == 123)
+	//if(keycode == 123 || keycode == 124) //for macos
+    if(keycode == 65361 || keycode == 65362) //for linux
+        {
+		if(keycode == 65361)
 			dx *= -1;
 		mlx->xmin += dx / 7.5;
 		mlx->xmax += dx / 7.5;
-		mandelbrot(mlx);
 	}
-	if(keycode == 126 || keycode == 125)
+    //	if(keycode == 126 || keycode == 125) //for macos
+    if(keycode == 65362 || keycode == 65364) //for linux
 	{
-		if(keycode == 126)
+		if(keycode == 65362)
 			dy *= -1;
 		mlx->ymin += dy / 7.5;
 		mlx->ymax += dy / 7.5;
-		mandelbrot(mlx);
 	}
-	if (keycode == 8)
+    //	if (keycode == 8) //for macos
+    if (keycode == 99) //for linux
 	{
 		mlx->color += 0x00321123;
-		//	mlx_destroy_window(mlx, mlx->win);
-		mandelbrot(mlx);
 	}
+    if (keycode == 119)
+        mlx->juliay += 0.2;
+    if (keycode == 115)
+        mlx->juliay -= 0.2;
+    if(keycode == 97)
+        mlx->juliax -= 0.2;
+    if (keycode == 100)
+        mlx->juliax += 0.2;
+    ft_run(mlx,1);
 	printf("you clicked %d!\n", keycode);
 	return 0;
 }
@@ -71,10 +69,10 @@ int	zoom(int keycode, int x, int y, t_data *mlx)
 	float dx;
 	float dy;
 
-	printf("keycode:%d - x:%d - y:%d\n",keycode,x,y);
+    //	printf("keycode:%d - x:%d - y:%d\n",keycode,x,y);
 	dx = (mlx->xmax - mlx->xmin) / SIZEX;
 	dy = (mlx->ymax - mlx->ymin) / SIZEY;
-	printf("dx:%f  / dy:%f\n", dx,dy);
+    //	printf("dx:%f  / dy:%f\n", dx,dy);
 	if (keycode == 1)
 	{
 		mlx->xmin = (mlx->xmin + ((dx * x) * 0.5));
@@ -82,26 +80,14 @@ int	zoom(int keycode, int x, int y, t_data *mlx)
 		mlx->ymax = (mlx->ymax - ((dy * y) * 0.5));
 		mlx->ymin = (mlx->ymin + ((dy * (SIZEY - y))  * 0.5));
 	}
-	if (keycode == 2)
+	//if (keycode == 2) // for macos
+    if (keycode == 3) // for linux
 	{
 		mlx->xmin = (mlx->xmin - ((dx * x) * 0.5));
 		mlx->xmax = (mlx->xmax + ((dx * (SIZEX - x)) * 0.5));
 		mlx->ymax = (mlx->ymax + ((dy * y) * 0.5));
 		mlx->ymin = (mlx->ymin - ((dy * (SIZEY - y))  * 0.5));
 	}
-
-	mandelbrot(mlx);
+	ft_run(mlx,1);
 	return (0);
-}
-
-int	endian_detect(void)
-{
-	short int word;
-	char *b;
-	word = 0x001;
-	b = (char *)&word;
-	if (b[0])
-		return (0);
-	else
-		return (1);
 }
