@@ -6,7 +6,7 @@
 #    By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/30 16:32:46 by ahjadani          #+#    #+#              #
-#    Updated: 2021/12/30 17:20:41 by ahjadani         ###   ########.fr        #
+#    Updated: 2021/12/31 14:05:21 by ahjadani         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -30,6 +30,9 @@ $(SRC)/%.o: $(SRC)/%.c $(HEADER)/fractol.h
 
 bonus: all
 
+startall:
+	$(shell ./fractol Mandelbrot & ./fractol Julia & ./fractol "Burning ship")
+
 clean:
 	$(RM) $(OBJECTS)
 
@@ -38,4 +41,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re
+.PHONY: all, clean, fclean, re, startall, bonus
