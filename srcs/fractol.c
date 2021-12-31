@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:51:34 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/12/30 22:54:56 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/12/31 19:41:23 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void	ft_usage(int flag)
 void	ft_how_to_use(void)
 {
 	printf(".::        Keys to use       ::.\n");
-	printf(":::  Left Click: to zoom in  :::\n");
-	printf("::: Right Click: to zoom out :::\n");
+	printf(":::    Scroll up to zoom in  :::\n");
+	printf(":::  Scroll down to zoom out :::\n");
 	printf(":::    C: to change colors   :::\n");
 	printf(":::  Use arrows to navigate  :::\n");
 	printf(":::W,A,S,D: for Julia to move:::\n\n");
