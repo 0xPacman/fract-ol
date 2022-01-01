@@ -28,9 +28,9 @@ in this project we will see the beauty of mathematics thanks to Benoit Mandelbro
 
 ### Available fractals:
 
-- Mandelbrot
-- Julia
-- Burning ship
+- [Mandelbrot](https://en.wikipedia.org/wiki/Mandelbrot_set)
+- [Julia](https://en.wikipedia.org/wiki/Julia_set)
+- [Burning ship](https://en.wikipedia.org/wiki/Burning_Ship_fractal)
 - More are coming...
 
 
@@ -45,11 +45,11 @@ To run all of them at once:
 
 To use:
 
-- Scroll up to zoom in
-- Scroll down to zoom out
-- C : to change colors
-- Use arrows to navigate
-- W,A,S,D : for Julia to change the shape
+- 🖱️ Scroll up to zoom in
+- 🖱️ Scroll down to zoom out
+- ⌨️ C : to change colors
+- ⌨️ Use arrows to navigate
+- ⌨️ W,A,S,D : for Julia to change the shape
 
 
 ---
