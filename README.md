@@ -17,13 +17,13 @@ in this project we will see the beauty of mathematics thanks to Benoit Mandelbro
   <sup align="center">this formula can be very simple, yet it create a universe of bottomless complexity.</sup></p>
 </p>
 
-### Requirements
+### Requirements:
 
 - clang
 - x11
 - [minilibx](https://github.com/42Paris/minilibx-linux)
 
-### How to install
+### How to install:
 `git clone && make`
 
 ### Available fractals:
@@ -51,6 +51,11 @@ To use:
 - ⌨️ Use arrows to navigate
 - ⌨️ W,A,S,D : for Julia to change the shape
 
+### Resources:
+
+- https://mathigon.org/course/fractals/mandelbrot
+- https://www.youtube.com/watch?v=NGMRB4O922I
+- I highly recommand reading this book: [Learning C with Fractals](https://bafybeie3bli55ue7kv2jjzdsq3adbcvjl5zcmyiolvh3kzflyasjbtb7zy.ipfs.infura-ipfs.io/)
 
 ---
 
