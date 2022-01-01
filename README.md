@@ -24,7 +24,7 @@ in this project we will see the beauty of mathematics thanks to Benoit Mandelbro
 - [minilibx](https://github.com/42Paris/minilibx-linux)
 
 ### How to install:
-`git clone && make`
+`git clone https://github.com/0xPacman/fract-ol.git && make`
 
 ### Available fractals:
 
@@ -61,7 +61,7 @@ To use:
 
 P.s 0.1  : Please run the program on supercomputer for better experiance.
 
-P.s 1.0: : This can be run corractly on MacOS that has already Minilibx lib, i'll fix that later to run on all UNIX machines (Win users i feel sorry for you)
+P.s 1.0: : This can be run corractly on MacOS that has already Minilibx lib or i'll fix that soon..
 
 P.s 2.0 : It can be run on linux too but there will be an issue with the keys, i'll fix that as well no worries.
 
