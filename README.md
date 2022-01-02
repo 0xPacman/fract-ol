@@ -61,7 +61,7 @@ To use:
 
 P.s 0.1  : Please run the program on supercomputer for better experiance.
 
-P.s 1.0: : This can be run corractly on MacOS that has already Minilibx lib or i'll fix that soon..
+P.s 1.0: : This can be run corractly on MacOS that has already Minilibx lib or i'll make it availabla on linux soon..
 
 P.s 2.0 : It can be run on linux too but there will be an issue with the keys, i'll fix that as well no worries.
 
