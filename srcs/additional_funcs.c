@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 16:01:14 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/12/30 22:44:51 by ahjadani         ###   ########.fr       */
+/*   Updated: 2022/01/03 14:53:39 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@ int	ft_exit(void)
 {
 	exit(1);
 	return (0);
+}
+
+void	sys_detect()
+{
+	struct utsname udata;
+	uname(&udata);
+	if (!ft_strcmp(udata.sysname, "Darwin"))
+		mlx->kernel = 'M';
+	else
+		printf("%s",udata.sysname);
 }
 
 int	ft_strcmp(char *s1, char *s2)

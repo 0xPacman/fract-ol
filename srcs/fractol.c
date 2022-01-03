@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:51:34 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/12/31 19:41:23 by ahjadani         ###   ########.fr       */
+/*   Updated: 2022/01/03 14:41:22 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ int	main(int argc, char *argv[])
 
 	if (argc >= 2)
 	{
+		sys_detect((void *)&mlx);
 		ft_header();
 		ft_usage(0);
 		ft_how_to_use();

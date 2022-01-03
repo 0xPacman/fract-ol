@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 13:34:10 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/12/31 19:15:49 by ahjadani         ###   ########.fr       */
+/*   Updated: 2022/01/03 14:47:33 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@
 # define MAXY 2
 # define SIZEX 700
 # define SIZEY 700
-# include "mlx.h"
+# include "../minilibx/mlx.h"
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
 # include <math.h>
+#include <sys/utsname.h>
 
 typedef struct s_data
 {
@@ -39,7 +40,7 @@ typedef struct s_data
 	int		loopy;
 	int		color;
 	int		fractol;
-
+	char	kernel;
 }	t_data;
 
 void	ft_run(t_data *mlx, int flag);
@@ -55,6 +56,7 @@ int		burning_set(double x, double y, t_data *mlx);
 int		keys(int keycode, t_data *vars);
 int		zoom(int keycode, int x, int y, t_data *mlx);
 int		ft_strcmp(char *s1, char *s2);
+void	sys_detect(t_data *mlx);
 int		ft_exit(void);
 
 #endif
