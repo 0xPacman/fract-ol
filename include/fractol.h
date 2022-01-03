@@ -56,7 +56,6 @@ int		burning_set(double x, double y, t_data *mlx);
 int		keys(int keycode, t_data *vars);
 int		zoom(int keycode, int x, int y, t_data *mlx);
 int		ft_strcmp(char *s1, char *s2);
-void	sys_detect(t_data *mlx);
 int		ft_exit(void);
 
 #endif

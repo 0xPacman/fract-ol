@@ -18,16 +18,6 @@ int	ft_exit(void)
 	return (0);
 }
 
-void	sys_detect()
-{
-	struct utsname udata;
-	uname(&udata);
-	if (!ft_strcmp(udata.sysname, "Darwin"))
-		mlx->kernel = 'M';
-	else
-		printf("%s",udata.sysname);
-}
-
 int	ft_strcmp(char *s1, char *s2)
 {
 	unsigned int	i;
@@ -45,18 +35,18 @@ void	move(int keycode, t_data *mlx)
 
 	dx = (mlx->xmax - mlx->xmin);
 	dy = (mlx->ymax - mlx->ymin);
-	if (keycode == 53)
+	if (keycode == 53 || keycode == 65307) 
 		exit(0);
-	if (keycode == 123 || keycode == 124)
+	if (keycode == 123 || keycode == 124 || keycode == 65363 || keycode == 65361)
 	{
-		if (keycode == 123)
+		if (keycode == 123 || keycode == 65361)
 			dx *= -1;
 		mlx->xmin += dx / 7.5;
 		mlx->xmax += dx / 7.5;
 	}
-	if (keycode == 126 || keycode == 125)
+	if (keycode == 126 || keycode == 125 || keycode == 65364 || keycode == 65362)
 	{
-		if (keycode == 125)
+		if (keycode == 125 || keycode == 65364)
 			dy *= -1;
 		mlx->ymin += dy / 7.5;
 		mlx->ymax += dy / 7.5;
@@ -64,19 +54,20 @@ void	move(int keycode, t_data *mlx)
 }
 
 int	keys(int keycode, t_data *mlx)
-{
+{ 
 	if (keycode == 53 || keycode == 123 || keycode == 124
-		|| keycode == 126 || keycode == 125)
+		|| keycode == 126 || keycode == 125 || keycode == 65307 ||
+        keycode == 65363 || keycode == 65361 || keycode == 65364 || keycode == 65362)
 		move(keycode, mlx);
-	if (keycode == 8)
+	if (keycode == 8 || keycode == 99)
 		mlx->color += 0x00321123;
-	if (keycode == 1)
+	if (keycode == 1 || keycode == 115)
 		mlx->juliay += 0.2;
-	if (keycode == 13)
+	if (keycode == 13 || keycode == 119)
 		mlx->juliay -= 0.2;
-	if (keycode == 0)
+	if (keycode == 0 || keycode == 97)
 		mlx->juliax -= 0.2;
-	if (keycode == 2)
+	if (keycode == 2 || keycode == 100)
 		mlx->juliax += 0.2;
 	ft_run(mlx, 1);
 	return (0);

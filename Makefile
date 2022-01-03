@@ -13,12 +13,20 @@
 SRC = srcs
 FILES = srcs/additional_funcs.c srcs/burningship.c srcs/fractol.c srcs/julia.c srcs/mandelbrot.c
 CFLAGS = -Werror -Wextra -Wall
-XFLAGS = -I /usr/local/include -lmlx -framework OpenGL -framework AppKit
+#XFLAGS = -I /usr/local/include -lmlx -framework OpenGL -framework AppKit
+
 OBJECTS = $(FILES:.c=.o)
 HEADER = inlcude
 NAME = fractol
 CC = cc
 RM = rm -f
+UNAME = $(shell uname -s)
+ifeq ($(UNAME),Linux)
+	XFLAGS = -I /usr/local/include -lmlx -lXext -lX11 -lm
+endif
+ifeq ($(UNAME),Darwin)
+	XFLAGS = -I /usr/local/include -lmlx -framework OpenGL -framework AppKit
+endif
 
 all: $(NAME)
 
