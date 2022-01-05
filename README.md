@@ -55,6 +55,7 @@ To use:
 
 - https://mathigon.org/course/fractals/mandelbrot
 - https://www.youtube.com/watch?v=NGMRB4O922I
+- https://www.youtube.com/watch?v=6IWXkV82oyY
 - I highly recommand reading this book: [Learning C with Fractals](https://bafybeie3bli55ue7kv2jjzdsq3adbcvjl5zcmyiolvh3kzflyasjbtb7zy.ipfs.infura-ipfs.io/)
 
 ---
