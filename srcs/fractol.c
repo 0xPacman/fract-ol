@@ -74,7 +74,6 @@ int	main(int argc, char *argv[])
 
 	if (argc >= 2)
 	{
-		sys_detect((void *)&mlx);
 		ft_header();
 		ft_usage(0);
 		ft_how_to_use();
