@@ -24,7 +24,6 @@
 # include <stdio.h>
 # include <string.h>
 # include <math.h>
-#include <sys/utsname.h>
 
 typedef struct s_data
 {
