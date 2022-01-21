@@ -60,11 +60,11 @@ To use:
 
 ---
 
-P.s 0.1 : Please run the program on supercomputer for better experiance.
+Note 0.1 : Please run the program on supercomputer for better experiance.
 
-P.s 0.2 : You can now run it on both Linux or MacOS
+Note 0.2 : You can now run it on both Linux or MacOS
 
-P.s 0.3 : If you face any problem please [open an new issue](https://github.com/0xPacman/fract-ol/issues/new/choose)
+Note 0.3 : If you face any problem please [open an new issue](https://github.com/0xPacman/fract-ol/issues/new/choose)
 
 ---
 
