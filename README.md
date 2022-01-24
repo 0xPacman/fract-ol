@@ -37,7 +37,7 @@ in this project we will see the beauty of mathematics thanks to Benoit Mandelbro
 ### How to use:
 To run:
 
-`./fractol <name of the availeble fractal>`
+`./fractol <the name of the availeble fractal>`
 
 To run all of them at once:
 
