@@ -17,6 +17,7 @@ CFLAGS = -Werror -Wextra -Wall
 
 OBJECTS = $(FILES:.c=.o)
 NAME = fractol
+HEADER = include
 CC = cc
 RM = rm -f
 UNAME = $(shell uname -s)
