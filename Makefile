@@ -16,7 +16,6 @@ CFLAGS = -Werror -Wextra -Wall
 #XFLAGS = -I /usr/local/include -lmlx -framework OpenGL -framework AppKit
 
 OBJECTS = $(FILES:.c=.o)
-HEADER = inlcude
 NAME = fractol
 CC = cc
 RM = rm -f
